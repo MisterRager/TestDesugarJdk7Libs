@@ -1,0 +1,28 @@
+plugins {
+    id "com.bugsnag.android.gradle" version "2.4.1"
+}
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "es.lolrav.testdesugarjdk7libs"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.qozix:tileview:2.2.6'
+}
